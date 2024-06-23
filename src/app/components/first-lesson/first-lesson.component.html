@@ -1,22 +1,39 @@
-<p-carousel [value]="items" [numVisible]="1" [numScroll]="1" [circular]="true" >
-    <ng-template pTemplate="item" let-item >
-      <div class="card w-75 mx-auto">
-        <div class="row px-5">
-            <div class="col-6">
-                <img src = {{item.Img}} class="" width="450">
+<p-carousel [value]="items" [numVisible]="1" [numScroll]="1" [circular]="true">
+  <ng-template pTemplate="item" let-item>
+    <div class="card w-75 mx-auto">
+      <div class="row px-5 mx-auto align-items-center">
+        <div class="row w-75 mx-auto mt-5">
+          <div class="d-none d-md-flex col-md-12 align-items-center">
+            <div class="col-md-6">
+              <img src={{item.Img}} width="300"  style="max-height: 100%;" >
             </div>
-            <div class="col-6">
-                <div class="card-body py-5 text-right">
-                    <h5 class="card-title font-weight-bold h2">{{ item.title }}</h5>
-                    <p class="card-text my-4 h3"  [innerHTML]="item.text"></p>
-                </div>
+            <div class="col-md-6">
+              <div class="card-body py-5 text-right">
+                <h5 class="card-title font-weight-bold h2">{{ item.title }}</h5>
+                <p class="card-text my-4 h3" [innerHTML]="item.text"></p>
+              </div>
             </div>
-            
+          </div>
 
+          <div class="d-flex flex-column col-sm-12 d-md-none">
+            <div class="col-sm-12">
+              <img src={{item.Img}} class="w-100" style="max-height: 100%;" >
+            </div>
+            <div class="col-sm-12">
+              <div class="card-body py-5 text-right">
+                <h5 class="card-title font-weight-bold h2">{{ item.title }}</h5>
+                <p class="card-text my-4 h3" [innerHTML]="item.text"></p>
+              </div>
+            </div>
+          </div>
         </div>
-       
-        </div>
-    </ng-template>
+
+
+
+      </div>
+
+    </div>
+  </ng-template>
 </p-carousel>
 
 <div class="text-right mx-5 py-5">
