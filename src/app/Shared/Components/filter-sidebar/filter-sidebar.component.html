@@ -1,0 +1,14 @@
+<p-sidebar
+  [(visible)]="showFilter"
+  position="right"
+  styleClass="w-22rem h-full"
+  (onShow)="setBodyOverflow('hidden')"
+  (onHide)="setBodyOverflow('auto'); showFilterChange.emit(false)"
+>
+  <ng-template pTemplate="headless">
+    <ng-container
+      *ngIf="filterContent"
+      [ngTemplateOutlet]="filterContent"
+    ></ng-container>
+  </ng-template>
+</p-sidebar>

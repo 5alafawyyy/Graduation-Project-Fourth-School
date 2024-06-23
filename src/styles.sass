@@ -1,0 +1,114 @@
+// Variable overrides first
+$primary: #900
+$enable-shadows: true
+$prefix: "mo-"
+$text: unset
+$displayStatus: none
+$displayPanelblock: inline-flex
+$justifycontent: space-evenly
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap"
+@import "bootstrap/dist/css/bootstrap.min.css"
+
+@import "primeicons/primeicons.css"
+@font-face
+  font-family: 'Poppins'
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+$bacground-default: #f8f9fa
+
+html
+  font-size: 13px
+
+body
+  overflow: auto
+  font-family: 'Poppins'
+  font-weight: normal
+  background: $bacground-default
+  color: var(--text-color)
+  padding: 1rem
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+a
+  text-decoration: unset
+
+.blue-btn
+  background: transparent linear-gradient(115deg, #004FC5 0%, #0F3978 100%) 0% 0% no-repeat padding-box
+
+.black-btn
+  background: transparent linear-gradient(115deg, #73767A 0%, #292929 100%) 0% 0% no-repeat padding-box
+
+.green-btn
+  background: transparent linear-gradient(115deg, #0CA81C 0%, #197013 100%) 0% 0% no-repeat padding-box
+
+.blue-btn,.black-btn,.green-btn
+  border-radius: 6px
+  width: 80px
+  height: 39px
+
+.custom-select
+  width: 200px
+  font-size: 16px
+
+.ng-arrow-wrapper
+  border-color: #333
+
+.p-dropdown ul
+  padding-left: 0rem
+
+.ng-dropdown-panel
+  border: 1px solid #ccc
+  border-radius: 8px
+
+.ng-value
+  color: #333
+  background-color: #f0f0f0
+
+.ng-option
+  cursor: pointer
+
+  &.ng-option-marked
+    background-color: #967272
+
+.p-datatable>.p-datatable-wrapper
+  overflow: unset
+
+.p-datatable .p-datatable-tbody > tr,th
+  border: 1px solid #E7EAEF
+  background: $bacground-default
+  padding-left: 0.5rem
+
+.p-datatable .p-datatable-tbody > tr,td
+  padding: 0.5rem 0.5rem
+  color: #626060
+
+.p-datatable .p-datatable-thead > tr,th
+  color: #626060
+  background: #E7EAEF
+
+.p-paginator
+  background: $bacground-default
+
+.p-steps .p-steps-item .p-menuitem-link
+  background: #F5F5F5 !important
+  padding: 0rem 1rem
+  cursor: pointer
+
+.p-steps .p-steps-item:before
+  margin-top: -0.3rem
+
+.p-steps .p-steps-item.p-highlight .p-steps-number
+  background: transparent linear-gradient(135deg, #004FC5 0%, #0F3978 100%) 0% 0% no-repeat padding-box
+  color: #FFFFFF
+
+.pointer
+  cursor: pointer
+
+.fs-45
+  font-size: 40px
+
+.fs-30 
+  font-size: 30px

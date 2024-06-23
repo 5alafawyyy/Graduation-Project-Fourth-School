@@ -1,0 +1,60 @@
+<p-sidebar [(visible)]="showMenu">
+  <ng-template pTemplate="headless">
+    <div class="flex flex-column h-full">
+      <div
+        [class]="isRTA ? 'profile-RTA flex flex-column align-items-center justify-content-center' : 'profile flex flex-column align-items-center justify-content-center'"
+      >
+        <div class="mt-3">
+          <a class="cursor-pointer">
+            <p-avatar
+              image="../../../../assets/images/user-circle.png"
+              shape="circle"
+              size="xlarge"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        class="overflow-y-auto my-5 sidebar-items"
+        *ngIf="menuItemes.length > 0"
+      >
+        <ul class="list-none p-0 m-0">
+          <li *ngFor="let item of menuItemes">
+            <span
+              pRipple
+              (click)="showMenu = false"
+              [routerLink]="item.url"
+              class="flex align-items-center cursor-pointer p-4 hover:surface-100 transition-duration-150 transition-colors p-ripple"
+            >
+              <i class="{{ item.icon }} mr-3" style="font-size: 1.2rem"></i>
+              <span class="text-xl"> {{ item.name }}</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </ng-template>
+</p-sidebar>
+
+<div class="flex">
+  <div class="flex-initial flex align-items-center justify-content-center">
+    <button
+      pButton
+      (click)="showMenu = true"
+      [icon]="showMenu ? 'pi pi-times' : 'pi pi-align-justify'"
+      [class]="isRTA ?  ' menu-btn-RTA' : ' menu-btn'"
+    ></button>
+  </div>
+  <div [class]="isRTA ? 'headerRTA fw-bolder flex-1 flex   m-2' : ' header flex-1 flex align-items-center justify-content-center'">
+    <span>{{ title }}</span>
+  </div>
+  <div   *ngIf="isRTA">
+    <img width="250px"  src="../../../../assets/RTA_Logo@2x.png" class="rta-logo">
+  </div>
+  <div [class]="isRTA ? 'headerRTA flex align-items-center justify-content-end pe-4 pt-3' : ' header flex align-items-center justify-content-end pe-4 pt-3'"> 
+  </div>
+</div>
+
+
+

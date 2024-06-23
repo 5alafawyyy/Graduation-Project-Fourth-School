@@ -1,0 +1,91 @@
+<p-carousel [value]="items" [numVisible]="1" [numScroll]="1" [circular]="true" >
+    <ng-template pTemplate="item" let-item >
+      <div class="card w-75 mx-auto">
+        <div class="row px-5">
+            <div class="col-6">
+                <img src = {{item.Img}} class="" width="450">
+            </div>
+            <div class="col-6">
+                <div class="card-body py-5 text-right">
+                    <h5 class="card-title font-weight-bold h2">{{ item.title }}</h5>
+                    <p class="card-text my-4 h3"  [innerHTML]="item.text"></p>
+                </div>
+            </div>
+            
+
+        </div>
+       
+        </div>
+    </ng-template>
+</p-carousel>
+
+<div class="text-right mx-5 py-5">
+    <h1 class="text-info padding">ملخص الدرس</h1>
+    <h3><span class="text-danger padding">الطاقه</span> : هي القدره على بذل شغل </h3>
+    <h3><span class="text-danger padding">الصوت</span> : صورة من صور الطاقه تصل الى الاذن فتسبب السمع وينشا من اهتزاز الاجسام </h3>
+    <h3 class="text-danger"> :تحولات الطاقه</h3>
+
+    <table class="table  table-bordered text-center py-5">
+        <thead >
+          <tr class="table-success">
+            <th scope="col">الطاقه الناتجه</th>
+            <th scope="col">الطاقه المستخدمه</th>
+            <th scope="col">الجهاز</th>
+            <th scope="col">الطاقه الناتجه</th>
+            <th scope="col">الطاقه المستخدمه</th>
+            <th scope="col">الجهاز</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td >حركيه</td>
+            <td>كهربيه</td>
+            <td class="table-info">الموتور</td>
+            <td >حركيه</td>
+            <td>كهربيه</td>
+            <td class="table-info">المروحه</td>
+          </tr>
+          
+          <tr>
+            
+            <td >صوتيه</td>
+            <td>حركيه</td>
+            <td class="table-info">اله العود</td>
+            <td >ضوئيه</td>
+            <td>كهربيه</td>
+            <td class="table-info">المصياح</td>
+          </tr>
+
+          <tr>
+            
+            <td >كهربيه</td>
+            <td>ضوئيه</td>
+            <td class="table-info"> الخليه الشمسيه</td>
+            <td >حراريه</td>
+            <td>كهربيه</td>
+            <td class="table-info">المدفاه</td>
+          </tr>
+
+          <tr>
+            
+            <td >حراريه</td>
+            <td>ضوئيه</td>
+            <td class="table-info">  السخان الشمسي </td>
+            <td >صوتيه</td>
+            <td>كهربيه</td>
+            <td class="table-info">الراديو</td>
+          </tr>
+
+          <tr>
+            
+            <td >كهربيه</td>
+            <td>كيميائيه</td>
+            <td class="table-info">   البطاريه </td>
+            <td >كهربيه</td>
+            <td>حركيه</td>
+            <td class="table-info">الدينامو</td>
+          </tr>
+        </tbody>
+      </table>
+</div>  
