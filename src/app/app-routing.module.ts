@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstUnitComponent } from './FirstUnit/first-unit/first-unit.component';
 import { FirstLessonComponent } from './components/first-lesson/first-lesson.component';
+import { SecondLessonComponent } from './components/second-lesson/second-lesson.component';
 import { AppComponent } from './app.component';
 
 import { Component } from '@angular/core';
@@ -28,12 +29,12 @@ const routes: Routes = [
   // },
   // Redirect the root path ('/') to a component that displays the image
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: ImageComponent }, 
-  
-   {
+  { path: 'home', component: ImageComponent },
+
+  {
     path: 'FirstUnit',
     component: FirstUnitComponent,
-  data: {
+    data: {
       breadcrumb: 'الوحده الاولى',
     },
   },
@@ -44,14 +45,18 @@ const routes: Routes = [
       breadcrumb: 'الدرس الاول ',
     },
   },
-  
-  
+  {
+    path: 'SecondLesson',
+    component: SecondLessonComponent,
+    data: {
+      breadcrumb: 'الدرس الثاني  ',
+    },
+  },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
-
-
+export class AppRoutingModule { }
