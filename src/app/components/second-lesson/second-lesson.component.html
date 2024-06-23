@@ -1,1 +1,31 @@
-<p>second-lesson works!</p>
+
+<p-carousel [value]="items" [numVisible]="1" [numScroll]="1" [circular]="true" >
+    <ng-template pTemplate="item" let-item >
+      <div class="card w-75 mx-auto">
+        <div class="row px-5">
+            <div class="col-6">
+                <img src = {{item.Img}} class="" width="450">
+            </div>
+            <div class="col-6">
+                <div class="card-body py-5 text-right">
+                    <h5 class="card-title font-weight-bold h2">{{ item.title }}</h5>
+                    <p class="card-text my-4 h3"  [innerHTML]="item.text"></p>
+                </div>
+            </div>
+            
+
+        </div>
+       
+        </div>
+    </ng-template>
+</p-carousel>
+
+<div class="text-right mx-5 py-5">
+    <h1 class="text-info padding">ملخص الدرس</h1>
+    <h3><span class="text-danger padding">الكهرباء الساكنة</span> : هي شحنات كهربية تبقى على جسم.</h3>
+    <p class="h5">مثال : المسطرة المشحونة تجذب قصاصات الورق غير المشحونة.</p>
+    <h3><span class="text-danger padding">الكهرباء التيارية</span> : هي شحنات كهربية تنتقل خلالَ أسلاك موصلة. </h3>
+    <h3 class="text-danger padding"> : التيار الكهربي <span>شحنات كهربية متحركة.</span></h3>
+    <h3><span class="text-danger padding"> الدائرة الكهربيه</span> :  مسار للتيار الكهربي.</h3>
+    <p class="h5">- معظم الأجهزة فى المنزل تعمل بالكهرباء.</p>
+</div>
